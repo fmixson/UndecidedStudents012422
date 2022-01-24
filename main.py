@@ -25,9 +25,6 @@ for i in range(len(newUndecidedFileDF)):
         if newUndecidedFileDF.loc[i, 'Student External ID'] == currentUndecidedFileDF.loc[j, 'Student External ID']:
             currentUndecided.append(i)
 newUndecidedDF = newUndecidedFileDF.drop(currentUndecided)
-# writer2 = pd.ExcelWriter('NewUndecided.xlsx', engine='xlsxwriter')
-# newUndecidedDF.to_excel(writer2, sheet_name='NewUndecided')
-# writer2.save()
 
 home = Path.home()
 saveUndecidedFile = Path(home, 'Desktop', 'NewUndecided.xlsx')
